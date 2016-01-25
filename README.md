@@ -1,11 +1,12 @@
 RetroPie Patch
 ==============
 
+
 * Splash en el incio
 * Configuración de las teclas de mame
 * Apagado rapido
+* Menu de texto en pantalla más grande
 * Menos mensajes de linux
-
 
 Quehaceres
 ==========
