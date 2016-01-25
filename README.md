@@ -11,3 +11,6 @@ Quehaceres
 ==========
 
 * mejorar automontado y copia de roms
+* emular mouse con los joystick en las computadoras
+* agregar netsurf con mouse emulado y teclado en pantalla
+* actualizador (?)
