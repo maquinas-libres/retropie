@@ -1,0 +1,48 @@
+#!/bin/bash
+#
+#	scraping para freeroms
+#
+
+echo "amiga	amiga
+amstrad_cpc	amstradcpc
+atari	atari2600
+atari_jaguar	atarijaguar
+atari_lynx	atarilynx
+colecovision	colecovision
+cps2	cps2
+game_gear	gamegear
+genesis	genesis
+gameboy_color	gbc
+gba_roms	gba
+intellivision	intellivision
+mame		mame-mame4all
+neogeo	neogeo
+neogeo_pocket	ngp
+nes	nes
+n64_roms	n64
+nintendo_gamecube	gc
+psx	psx
+psp_roms	psp
+sega_cd	segacd	mastersystem
+sega_dreamcast	dreamcast
+sega_master_system
+sega_genesis_32x	sega32x
+snes_roms	snes
+tg16	tg16
+wonderswan	wonderswan" | while read PP; do
+	P=$(echo  "$PP" |sed "s/\t.*$//")	#freedoms
+	P1=$(echo  "$PP" |sed "s/^.*\t//")	#retropie
+	mkdir -p roms/$P1 2> /dev/null
+	echo "#ABCDEFGHIJKLOPQRSTNUVWYZ" | sed "s/\(.\?\)/\1\n/g" \
+	| while read L; do
+		lynx -nonumbers -dump http://www.freeroms.com/${P}_roms_${L}.htm \
+		| grep title | cut -d= -f2 | cut -d\& -f1 | while read J; do
+			wget -c http://download.freeroms.com/amiga_roms/$(echo ${L} | tr '[:upper:]' '[:lower:]' )/${J}.zip -O roms/${P1}/${J}.zip
+		done
+	done
+done
+
+exit
+
+no se que es "raine"
+
