@@ -12,6 +12,12 @@ Quehaceres
 ==========
 
 * mejorar automontado y copia de roms
+* mejorar mc
 * emular mouse con los joystick en las computadoras
 * agregar netsurf con mouse emulado y teclado en pantalla
 * actualizador (?)
+
+--
+
+**Donar Bitcoin:** 19qkh5dNVxL58o5hh6hLsK64PwEtEXVHXs
+
